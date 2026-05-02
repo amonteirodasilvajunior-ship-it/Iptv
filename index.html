@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPTV Profissional</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #222;
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .container {
+            display: flex;
+            flex: 1;
+        }
+
+        nav {
+            background-color: #333;
+            color: #fff;
+            width: 250px;
+            min-height: 100%;
+            padding: 1rem;
+            box-sizing: border-box;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            margin: 0.5rem 0;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            display: block;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+        }
+
+        nav ul li a:hover {
+            background-color: #575757;
+        }
+
+        main {
+            flex: 1;
+            padding: 1rem;
+            box-sizing: border-box;
+        }
+
+        .channel-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .channel {
+            background-color: #444;
+            color: #fff;
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: center;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .channel:hover {
+            background-color: #555;
+        }
+
+        .player {
+            background-color: #f4f4f4;
+            padding: 1rem;
+            border-radius: 8px;
+        }
+
+        video {
+            width: 100%;
+            max-height: 400px;
+            border: 2px solid #222;
+            border-radius: 8px;
+            background: #000;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+
+            nav {
+                width: 100%;
+                min-height: auto;
+            }
+
+            nav ul {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 0.5rem;
+            }
+
+            nav ul li {
+                margin: 0;
+            }
+
+            .channel-list {
+                grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>IPTV Profissional</h1>
+    </header>
+
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="#">Início</a></li>
+                <li><a href="#">Canais</a></li>
+                <li><a href="#">Favoritos</a></li>
+                <li><a href="#">Configurações</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <h2>Lista de Canais</h2>
+            <div class="channel-list">
+                <div class="channel">
+                    <h3>Canal 1</h3>
+                </div>
+                <div class="channel">
+                    <h3>Canal 2</h3>
+                </div>
+                <div class="channel">
+                    <h3>Canal 3</h3>
+                </div>
+                <div class="channel">
+                    <h3>Canal 4</h3>
+                </div>
+                <div class="channel">
+                    <h3>Canal 5</h3>
+                </div>
+            </div>
+
+            <div class="player">
+                <h2>Player de Vídeo</h2>
+                <video controls>
+                    <source src="seu_video.mp4" type="video/mp4">
+                    Seu navegador não suporta o vídeo.
+                </video>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
